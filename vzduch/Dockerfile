@@ -3,19 +3,19 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:7.0-jammy-arm64v8 AS build
 
 ARG VZDUCH_VERSION
 
 
-RUN wget -O vzduch.tar.xz https://github.com/ozczecho/vzduch-dotek/archive/refs/tags/"${VZDUCH_VERSION}".tar.gz \
+RUN wget -O vzduch.tar.xz https://github.com/pjfian/vzduch-dotek/archive/refs/tags/"${VZDUCH_VERSION}".tar.gz \
     && tar xvzf vzduch.tar.xz -C /usr/src/ \
     && cd /usr/src/vzduch-dotek-"${VZDUCH_VERSION}"
 
 WORKDIR /usr/src/vzduch-dotek-"${VZDUCH_VERSION}"
 
 RUN dotnet restore
-RUN dotnet publish -c release -o /app -r linux-x64 --self-contained true --no-restore /p:PublishTrimmed=true /p:PublishSingleFile=true
+RUN dotnet publish -c release -o /app -r linux-arm64 --self-contained true --no-restore /p:PublishTrimmed=true /p:PublishSingleFile=true
 
 # final stage/image
 FROM $BUILD_FROM
