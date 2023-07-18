@@ -3,7 +3,7 @@
     "version": "1.9.1",
     "slug": "vzduch_dotek",
     "description": "Vzduch Dotek Api",
-    "arch": [ "arm64" ],
+    "arch": [ "aarch64" ],
     "url":"https://github.com/ozczecho/vzduch-dotek",
     "webui": "http://[HOST]:[PORT:5353]/api/aircons",
     "startup": "application",
