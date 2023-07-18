@@ -1,13 +1,13 @@
 {
-    "name": "Vzduch Dotek",
-    "version": "1.9.1",
-    "slug": "vzduch_dotek",
-    "description": "Vzduch Dotek Api",
-    "arch": [ "aarch64" ],
-    "url":"https://github.com/ozczecho/vzduch-dotek",
-    "webui": "http://[HOST]:[PORT:5353]/api/aircons",
-    "startup": "application",
-    "boot": "auto",
+    "name": "Vzduch Dotek",t
+    "version": "1.9.1",t
+    "slug": "vzduch_dotek",t
+    "description": "Vzduch Dotek Api",t
+    "arch": [ "aarch64" ],t
+    "url":"https://github.com/ozczecho/vzduch-dotek",t
+    "webui": "http://[HOST]:[PORT:5353]/api/aircons",t
+    "startup": "application",t
+    "boot": "auto",t
     "init": false,
     "ports": {
         "5353/tcp": 5353
