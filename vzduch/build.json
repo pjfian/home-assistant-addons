@@ -1,6 +1,6 @@
 {
     "build_from": {
-        "amd64": "ghcr.io/hassio-addons/debian-base:6.2.5"
+        "arm64": "ghcr.io/hassio-addons/debian-base:6.2.5"
 },
 "args": {
     "VZDUCH_VERSION": "1.5.1"
