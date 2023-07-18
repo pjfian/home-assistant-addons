@@ -8,11 +8,11 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0-jammy-arm64v8 AS build
 ARG VZDUCH_VERSION
 
 
-RUN wget -O vzduch.tar.xz https://github.com/pjfian/vzduch-dotek/archive/refs/tags/"${VZDUCH_VERSION}".tar.gz \
+RUN wget -O vzduch.tar.xz https://github.com/pjfian/vzduch-dotek/archive/refs/tags/1.5.1.tar.gz \
     && tar xvzf vzduch.tar.xz -C /usr/src/ \
-    && cd /usr/src/vzduch-dotek-"${VZDUCH_VERSION}"
+    && cd /usr/src/vzduch-dotek-1.5.1
 
-WORKDIR /usr/src/vzduch-dotek-"${VZDUCH_VERSION}"
+WORKDIR /usr/src/vzduch-dotek-1.5.1
 
 RUN dotnet restore
 RUN dotnet publish -c release -o /app -r linux-arm64 --self-contained true --no-restore /p:PublishTrimmed=true /p:PublishSingleFile=true
