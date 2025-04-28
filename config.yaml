@@ -17,7 +17,7 @@ ports_description:
   5353/tcp: 'Airtouch3 web api'
 init: false
 options:
-  airtouch_ip: '192.168.86.35'
+  airtouch_ip: '192.168.86.38'
   airtouch_port: 8899
   logLevel: 'Information'
 schema:
