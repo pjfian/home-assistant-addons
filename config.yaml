@@ -1,5 +1,5 @@
 name: Airtouch3 Home Assistant Addon (vzduch-dotek)
-version: 1.0.0
+version: 1.0.3
 slug: vzduch-dotek
 description: Airtouch3 api
 startup: application
@@ -9,7 +9,7 @@ arch:
   - armhf
   - armv7
 url: 'https://github.com/pjfian/home-assistant-addons'
-image: 'ghcr.io/pjfian/airtouch3'
+image: 'ghcr.io/pjfian/airtouch3:1.0.1'
 webui: 'http://[HOST]:[PORT:5353]/api/aircons'
 ports:
   5353/tcp: 5353
