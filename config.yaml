@@ -1,5 +1,5 @@
 name: Airtouch3 Home Assistant Addon (vzduch-dotek)
-version: 1.0.3
+version: 1.0.1
 slug: vzduch-dotek
 description: Airtouch3 api
 startup: application
